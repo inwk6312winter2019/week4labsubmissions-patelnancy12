@@ -1,16 +1,14 @@
-import string
+import string 
+print(string.punctuation)
 
-def stripped_text():
-	n_res = []
-	f = open('file.txt','r')
+def display_string():
 
-	for line in f:
-		res = line.lower().strip(string.punctuation + string.whitespace).split()
-		n_res += res
-	return n_res
+  str1 = []
+  fout = open("file.txt",'r')
 
-print(stripped_text())
+  for line in fout:
+    str2 = line.lower().strip(string.punctuation + string.whitespace)
+    str1 += str2
+  return str1
 
-
-
-
+print(display_string())
